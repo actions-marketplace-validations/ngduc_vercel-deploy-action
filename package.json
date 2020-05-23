@@ -1,17 +1,14 @@
 {
-  "name": "now-deployment",
-  "private": true,
+  "name": "vercel-deploy-action",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/amondnet/now-deployment"
+    "url": "https://github.com/ngduc/vercel-deploy-action"
   },
   "author": {
-    "name": "Minsu Lee",
-    "email": "amond@amond.net",
-    "url": "https://amond.dev"
+    "name": "Duc Ng"
   },
-  "version": "19.0.1",
+  "version": "19.0.10",
   "main": "index.js",
   "scripts": {
     "lint": "eslint index.js",
@@ -45,7 +42,7 @@
     "jest": "^26.0.1"
   },
   "engines": {
-    "node": "v12"
+    "node": ">=v12"
   },
   "keywords": [
     "GitHub",

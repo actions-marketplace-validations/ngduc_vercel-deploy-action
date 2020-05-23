@@ -1,4 +1,8 @@
-# Vercel Action
+# Vercel Deploy Action
+
+Based on [Vercel Action](https://github.com/amondnet/vercel-action):
+- fixed CLI with git comment.
+- add output: preview-url-host (without https, to use with vercel cleanup API).
 
 ![deploy website preview](https://github.com/amondnet/vercel-action/workflows/deploy%20website%20preview/badge.svg)
 ![test now-deployment action](https://github.com/amondnet/vercel-action/workflows/test%20now-deployment%20action/badge.svg)

@@ -77,7 +77,7 @@ async function vercelDeploy(ref, commit) {
       '-m',
       `githubCommitRepo=${context.repo.repo}`,
       '-m',
-      `githubCommitMessage=${commit}`,
+      `githubCommitMessage="${commit}"`,
       '-m',
       `githubCommitRef=${ref}`,
     ],
@@ -250,6 +250,7 @@ async function run() {
   if (deploymentUrl) {
     core.info('set preview-url output');
     core.setOutput('preview-url', deploymentUrl);
+    core.setOutput('preview-url-host', deploymentUrl.trim().replace(/https\:\/\//, ''));
   } else {
     core.warning('get preview-url error');
   }
