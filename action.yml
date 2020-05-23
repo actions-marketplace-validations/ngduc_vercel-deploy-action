@@ -1,4 +1,4 @@
-name: 'Vercel Action'
+name: 'Vercel Deploy Action'
 description: 'This action make a deployment with github actions instead of Vercel builder.'
 inputs:
   vercel-token:
@@ -52,6 +52,8 @@ inputs:
 outputs:
   preview-url:
     description: 'deployment preview URL'
+  preview-url-host:
+    description: 'deployment preview URL host (without "https://").'
   preview-name:
     description: 'deployment preview name'
 runs:
