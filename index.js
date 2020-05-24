@@ -11,6 +11,7 @@ const githubComment = core.getInput('github-comment') === 'true';
 const workingDirectory = core.getInput('working-directory');
 
 // Vercel
+const vercelCli = core.getInput('vercel-cli');
 const vercelToken = core.getInput('vercel-token', { required: true });
 const vercelArgs = core.getInput('vercel-args');
 const vercelOrgId = core.getInput('vercel-org-id');
@@ -56,7 +57,7 @@ async function vercelDeploy(ref, commit) {
   await exec.exec(
     'npx',
     [
-      'vercel',
+      vercelCli,
       ...vercelArgs.split(/ +/),
       '-t',
       vercelToken,

@@ -1,8 +1,9 @@
 # Vercel Deploy Action
 
 Based on [Vercel Action](https://github.com/amondnet/vercel-action):
-- fixed CLI with git comment.
+- add input: "vercel-cli" to override to use the previous "now" CLI (latest) instead of "vercel".
 - add output: preview-url-host (without https, to use with vercel cleanup API).
+- fixed CLI with git comment.
 
 ![deploy website preview](https://github.com/amondnet/vercel-action/workflows/deploy%20website%20preview/badge.svg)
 ![test now-deployment action](https://github.com/amondnet/vercel-action/workflows/test%20now-deployment%20action/badge.svg)
@@ -161,6 +162,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: ngduc/vercel-deploy-action@master
         with:
+          vercel-cli: vercel # optional ("vercel" or "now")
           vercel-token: ${{ secrets.VERCEL_TOKEN }} # Required
           github-token: ${{ secrets.GITHUB_TOKEN }} #Optional 
           vercel-args: '--prod' #Optional

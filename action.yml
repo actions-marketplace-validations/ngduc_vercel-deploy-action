@@ -1,6 +1,10 @@
 name: 'Vercel Deploy Action'
 description: 'This action make a deployment with github actions instead of Vercel builder.'
 inputs:
+  vercel-cli:
+    description: 'Vercel command line. (can be override with "now" CLI)'
+    required: false
+    default: 'vercel'
   vercel-token:
     description: 'Vercel token'
     required: true
