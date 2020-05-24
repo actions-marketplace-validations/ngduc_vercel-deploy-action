@@ -61,6 +61,10 @@ This action make a Vercel deployment with github actions.
 
 The url of deployment preview.
 
+### `preview-url-host`
+
+The url host of deployment preview (without "https://").
+
 ### `preview-name`
 
 The name of deployment name.
@@ -155,7 +159,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: amondnet/vercel-action@v19
+      - uses: ngduc/vercel-deploy-action@master
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }} # Required
           github-token: ${{ secrets.GITHUB_TOKEN }} #Optional 
